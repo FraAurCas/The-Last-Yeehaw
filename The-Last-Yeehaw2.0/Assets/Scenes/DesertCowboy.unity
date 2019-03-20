@@ -3261,7 +3261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fadcbc30421b5f041b95c1604a10d75d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 100
+  playerHealth: 99
   pHealth: 0
   speed: 6
   ammoShot: 0
