@@ -125,9 +125,9 @@ public class PlayerMovement : MonoBehaviour
             ammoMachine += 10;
             SetHUDText();
         }
-        else if (collision.gameObject.tag == "hPickup" && pHealth <99)
+        else if (collision.gameObject.tag == "hPickup" && pHealth < playerHealth)
         {
-            pHealth += 33;
+            pTakeDamage(-33);
             SetHUDText();
         }
     }
