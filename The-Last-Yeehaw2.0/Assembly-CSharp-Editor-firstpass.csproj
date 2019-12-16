@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Plugins\GitHub\Editor\ExtensionLoader.cs" />
+    <Compile Include="Assets\Plugins\GitHub\Editor\UnityAPIWrapper.cs" />
     <None Include="Assets\Plugins\GitHub\Editor\credits.txt" />
     <None Include="Assets\Plugins\GitHub\Editor\eula.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
@@ -320,6 +321,9 @@
     </Reference>
     <Reference Include="GitHub.Unity.45">
       <HintPath>C:/Users/frank/The-Last-Yeehaw/The-Last-Yeehaw2.0/Assets/Plugins/GitHub/Editor/GitHub.Unity.45.dll</HintPath>
+    </Reference>
+    <Reference Include="GitHub.UnityShim">
+      <HintPath>C:/Users/frank/The-Last-Yeehaw/The-Last-Yeehaw2.0/Assets/Plugins/GitHub/Editor/GitHub.UnityShim.dll</HintPath>
     </Reference>
     <Reference Include="sfw.net">
       <HintPath>C:/Users/frank/The-Last-Yeehaw/The-Last-Yeehaw2.0/Assets/Plugins/GitHub/Editor/sfw.net.dll</HintPath>

@@ -60,12 +60,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\HudController.cs" />
-    <Compile Include="Assets\MenuController.cs" />
+    <Compile Include="Assets\Scripts\HudController.cs" />
+    <Compile Include="Assets\Scripts\MenuController.cs" />
     <Compile Include="Assets\Scripts\PewController.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\ShotPickup.cs" />
     <Compile Include="Assets\Scripts\ZambieController.cs" />
-    <Compile Include="Assets\ShotPickup.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/frank/The-Last-Yeehaw/The-Last-Yeehaw2.0/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

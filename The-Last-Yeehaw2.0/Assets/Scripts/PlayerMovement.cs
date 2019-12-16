@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject EndCanvas;
 
-    bool isDead;
+    public bool isDead;
 
     public GameObject ShotPickup;
     public GameObject MachinePickup;
@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
     public Text shotPewT;
     public Text machinePewT;
     public Text healthT;
-    CapsuleCollider capsuleCollider;
+    private CapsuleCollider capsuleCollider;
 
     public float spawnTimeS = 10f;
     public float spawnTimeZ = 3f;
@@ -49,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
     public float spawnTimeH = 15f;
     public Transform[] spawnPoints;
     public Transform[] ammoSpawns;
+    public Transform[] mousePos = 
 
     private float nextFireS;
     private float nextFireP;
@@ -133,19 +134,15 @@ public class PlayerMovement : MonoBehaviour
     }
     
 
-    void SpawnZ()
+    private void SpawnZ()
     {
-        if (pHealth <= 0f)
-        {
-            return;
-        }
-        else if (pHealth > 0f)
+        if (pHealth > 0f)
         {
             int spawnPointIndexZ = Random.Range(0, spawnPoints.Length);
             Instantiate(Zambie, spawnPoints[spawnPointIndexZ].position, spawnPoints[spawnPointIndexZ].rotation);
         }
     }
-    void SpawnS()
+    private void SpawnS()
     {
         if (pHealth <= 0f)
         {
@@ -157,7 +154,7 @@ public class PlayerMovement : MonoBehaviour
             Instantiate(ShotPickup, ammoSpawns[spawnPointIndexS].position, ammoSpawns[spawnPointIndexS].rotation);
         }
     }
-    void SpawnM()
+    private void SpawnM()
     {
         if (pHealth <= 0f)
         {
@@ -169,7 +166,7 @@ public class PlayerMovement : MonoBehaviour
             Instantiate(MachinePickup, ammoSpawns[spawnPointIndexS].position, ammoSpawns[spawnPointIndexS].rotation);
         }
     }
-    void SpawnH()
+    private void SpawnH()
     {
         if (pHealth <= 0f)
         {
@@ -181,13 +178,12 @@ public class PlayerMovement : MonoBehaviour
             Instantiate(HealthPickup, ammoSpawns[spawnPointIndexS].position, ammoSpawns[spawnPointIndexS].rotation);
         }
     }
-    void Death()
+    private void Death()
     {
-        isDead = true;
         Vector3 movement = new Vector3(0, 0.0f, 0);
         GetComponent<Rigidbody>().velocity = movement * 0;
-        Destroy(gameObject, 0.0f);
         EndCanvas.SetActive(true);
+        Destroy(gameObject, 0.0f);
     }
     public void SetHUDText()
     {
@@ -204,9 +200,9 @@ public class PlayerMovement : MonoBehaviour
         GetComponent<Rigidbody>().velocity = movement * speed;
 
         GetComponent<Rigidbody>().position = new Vector3
-        (
-            Mathf.Clamp(GetComponent<Rigidbody>().position.x, -10.0f, 10.0f), 0.0f,
-            Mathf.Clamp(GetComponent<Rigidbody>().position.z, -4.0f, 4.0f)
-        );
+        (GetComponent<Rigidbody>().position.x, 0.0f, GetComponent<Rigidbody>().position.z);
+
+        transform.localRotation = Vector3.RotateTowards()
+
     }
 }

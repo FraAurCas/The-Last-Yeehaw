@@ -12,7 +12,10 @@ public class HudController : MonoBehaviour
     public Text machinePew;
     public Text health;
 
-
+    void Awake()
+    {
+        
+    }
 
     // Start is called before the first frame update
     void SetHUDText()
